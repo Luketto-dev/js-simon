@@ -8,7 +8,7 @@
 let containerRandomNumbers = document.querySelector(".container-numeri-casuali")
 // dichiaro variabile numeriCasuali
 let numeriCasuali = [];
-// dichiaro variabil numeriUtente
+// dichiaro variabil numeriUtente che popolerò tramite un prompt
 let numeriUtente = [];
 
 let secondiRimanenti = 30
@@ -53,12 +53,10 @@ const stopWatch = setInterval(function(){
         clearInterval(stopWatch)
 
         containerRandomNumbers.innerHTML = "" 
+        prompt("inserisci i numeri che hai visto")
     }
 
 }, 1000)
 
 
-setTimeout(function(){
-    prompt("inserisci i numeri che hai visto")
-}, 30000)
 
