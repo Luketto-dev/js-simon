@@ -57,3 +57,8 @@ const stopWatch = setInterval(function(){
 
 }, 1000)
 
+
+setTimeout(function(){
+    prompt("inserisci i numeri che hai visto")
+}, 30000)
+
