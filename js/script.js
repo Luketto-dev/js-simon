@@ -18,6 +18,7 @@ function createRandomNumbers(){
 
     while (numeriCasuali.length < 5) {
         const randomNumber = Math.floor(Math.random() * 100)
+        // se il numero non è incluso nell array lo pusho altrimenti continuo a creare numeri finchè la lunghezza dell array è minore di 5
         if (!numeriCasuali.includes(randomNumber)) {
             numeriCasuali.push(randomNumber)
         }
@@ -30,6 +31,7 @@ function createRandomNumbers(){
 
 createRandomNumbers()
 
+// funzione per stampare in html i numeriRandome
 function renderRandomNumber() {
     for (let i = 0; i < numeriCasuali.length; i++) {
         const singleNumber = numeriCasuali[i]
@@ -40,13 +42,16 @@ function renderRandomNumber() {
     }
 }
 
+// creo intervallo di 30 secondi quando arraiva a 0 i numeri spariscono
 const stopWatch = setInterval(function(){
     // ad ogni secondo che passa diminuisco i 
     secondiRimanenti --;
     console.log(secondiRimanenti)
 
+    // svuoto l html quando i secondi rimanenti sono uguali a 0 
     if (secondiRimanenti === 0) {
         clearInterval(stopWatch)
+
         containerRandomNumbers.innerHTML = "" 
     }
 
